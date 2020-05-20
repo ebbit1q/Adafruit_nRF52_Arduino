@@ -42,6 +42,11 @@ extern "C"
 #define NUM_ANALOG_INPUTS    (8)
 #define NUM_ANALOG_OUTPUTS   (0)
 
+// these 3 defines are needed for a simple empty sketch to be able to compile...
+
+#define LED_STATE_ON         0         // State when LED is litted
+#define PIN_SERIAL1_RX      (8)
+#define PIN_SERIAL1_TX      (6)
 
 /*
  * Analog GPIOs cannot be remapped
@@ -69,15 +74,6 @@ static const uint8_t A7  = PIN_A7 ;
 #define PIN_NFC1           (9)
 #define PIN_NFC2           (10)
 
-/*
- * SPI Interfaces
- */
-#define SPI_INTERFACES_COUNT 0
-
-/*
- * Wire Interfaces
- */
-#define WIRE_INTERFACES_COUNT 0
 
 #ifdef __cplusplus
 }
