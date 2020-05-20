@@ -550,3 +550,58 @@ mdbt50qrx.menu.debug.l2.build.debug_flags=-DCFG_DEBUG=2
 mdbt50qrx.menu.debug.l3=Level 3 (Segger SystemView)
 mdbt50qrx.menu.debug.l3.build.debug_flags=-DCFG_DEBUG=3
 mdbt50qrx.menu.debug.l3.build.sysview_flags=-DCFG_SYSVIEW=1
+
+
+# ----------------------------------
+# Generic nRF52840 with 32kHz Crystal Oscillator
+# ----------------------------------
+generic_nrf52840_lfxo.name=Generic nRF52840DK with 32kHz Oscillator
+generic_nrf52840_lfxo.bootloader.tool=bootburn
+
+# VID/PID for bootloader with/without UF2, Arduino + Circuitpython App
+generic_nrf52840_lfxo.vid.0=0x239A
+generic_nrf52840_lfxo.pid.0=0x8029
+generic_nrf52840_lfxo.vid.1=0x239A
+generic_nrf52840_lfxo.pid.1=0x0029
+generic_nrf52840_lfxo.vid.2=0x239A
+generic_nrf52840_lfxo.pid.2=0x002A
+generic_nrf52840_lfxo.vid.3=0x239A
+generic_nrf52840_lfxo.pid.3=0x802A
+
+# Upload
+generic_nrf52840_lfxo.upload.tool=nrfutil
+generic_nrf52840_lfxo.upload.protocol=nrfutil
+generic_nrf52840_lfxo.upload.use_1200bps_touch=true
+generic_nrf52840_lfxo.upload.wait_for_upload_port=true
+generic_nrf52840_lfxo.upload.maximum_size=815104
+generic_nrf52840_lfxo.upload.maximum_data_size=237568
+
+# Build
+generic_nrf52840_lfxo.build.mcu=cortex-m4
+generic_nrf52840_lfxo.build.f_cpu=64000000
+generic_nrf52840_lfxo.build.board=GENERIC_NRF52840_LFXO
+generic_nrf52840_lfxo.build.core=nRF5
+generic_nrf52840_lfxo.build.variant=generic_nrf52840_lfxo
+generic_nrf52840_lfxo.build.usb_manufacturer="Nordic"
+generic_nrf52840_lfxo.build.usb_product="nRF52840"
+generic_nrf52840_lfxo.build.extra_flags=-DNRF52840_XXAA {build.flags.usb}
+generic_nrf52840_lfxo.build.ldscript=nrf52840_s140_v6.ld
+generic_nrf52840_lfxo.build.vid=0x239A
+generic_nrf52840_lfxo.build.pid=0x8029
+
+# SofDevice Menu
+generic_nrf52840_lfxo.menu.softdevice.s140v6=0.3.2 SoftDevice s140 6.1.1
+generic_nrf52840_lfxo.menu.softdevice.s140v6.build.sd_name=s140
+generic_nrf52840_lfxo.menu.softdevice.s140v6.build.sd_version=6.1.1
+generic_nrf52840_lfxo.menu.softdevice.s140v6.build.sd_fwid=0x00B6
+
+# Debug Menu
+generic_nrf52840_lfxo.menu.debug.l0=Level 0 (Release)
+generic_nrf52840_lfxo.menu.debug.l0.build.debug_flags=-DCFG_DEBUG=0
+generic_nrf52840_lfxo.menu.debug.l1=Level 1 (Error Message)
+generic_nrf52840_lfxo.menu.debug.l1.build.debug_flags=-DCFG_DEBUG=1
+generic_nrf52840_lfxo.menu.debug.l2=Level 2 (Full Debug)
+generic_nrf52840_lfxo.menu.debug.l2.build.debug_flags=-DCFG_DEBUG=2
+generic_nrf52840_lfxo.menu.debug.l3=Level 3 (Segger SystemView)
+generic_nrf52840_lfxo.menu.debug.l3.build.debug_flags=-DCFG_DEBUG=3
+generic_nrf52840_lfxo.menu.debug.l3.build.sysview_flags=-DCFG_SYSVIEW=1
